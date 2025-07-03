@@ -2,7 +2,9 @@
 
 ## install
 ```sh
-bach ./install_cvat_wsl_ubuntu24.sh
+git clone https://github.com/keitayoneda/cvat_installer.git
+cd cvat_installer
+bash ./install_cvat_wsl_ubuntu24.sh
 ```
 
 ## cvatを開始
