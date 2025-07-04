@@ -9,10 +9,11 @@ bash ./install_cvat_wsl_ubuntu24.sh
 
 ## cvatを開始
 ```sh
-docker compose -f docker-compose.yml -f components/serverless/docker-compose.serverless.yml -f docker-compose.override.yml up -d
+cd ~/cvat
+sudo docker compose -f docker-compose.yml -f components/serverless/docker-compose.serverless.yml -f docker-compose.override.yml up -d
 ```
 
-ブラウザのurlに`localhost:8080`と打つと立ち上がったアプリにアクセスできる.
+ブラウザのurlに`localhost:8080`と打つか、[http://localhost:8080/](http://localhost:8080/) にアクセスすると立ち上がったアプリにアクセスできる.
 
 最初にアカウントを作るよう要求されるので要求に沿ってアカウントを作成する.
 
@@ -21,5 +22,5 @@ docker compose -f docker-compose.yml -f components/serverless/docker-compose.ser
 
 ## cvatを終了
 ```sh
-docker compose -f docker-compose.yml -f components/serverless/docker-compose.serverless.yml -f docker-compose.override.yml down
+sudo docker compose -f docker-compose.yml -f components/serverless/docker-compose.serverless.yml -f docker-compose.override.yml down
 ```

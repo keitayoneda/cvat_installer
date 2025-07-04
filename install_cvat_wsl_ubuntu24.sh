@@ -14,7 +14,7 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt update
 
-sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
 sudo systemctl enable docker
 
@@ -24,6 +24,7 @@ cd ~/cvat
 cp ~/cvat_installer/docker-compose.override.yml .
 mkdir -p ~/particle_detection/pictures
 
-echo "install finished!\n"
-echo "run following commands to start up\n docker compose -f docker-compose.yml -f components/serverless/docker-compose.serverless.yml -f docker-compose.override.yml up -d
+echo "install finished!"
+echo "run following commands to start up"
+echo "sudo docker compose -f docker-compose.yml -f components/serverless/docker-compose.serverless.yml -f docker-compose.override.yml up -d
 "

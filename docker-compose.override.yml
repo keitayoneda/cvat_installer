@@ -18,7 +18,7 @@ services:
 volumes:
     cvat_share:
         driver_opts:
-        type: none
-        device: /home/yanada/particle_detection/pictures
-        o: bind
+            type: none
+            device: /home/yanada/particle_detection/pictures
+            o: bind
 
